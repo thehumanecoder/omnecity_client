@@ -7,6 +7,19 @@ const NavItem = props =>(
   </li>
 );
 
+const OfferCard = props =>(
+  <div className="m-10">
+    <Image
+      src={props.image}
+      width={350}
+      height={300}
+      />
+      <h2 className="text-2xl font-bold my-2">{props.header}</h2>
+      <p className="text-md ">
+      {props.text} 
+      </p>
+  </div>
+)
 
 
 export default function Home() {
@@ -44,11 +57,49 @@ export default function Home() {
          <b>No Mus No Fus</b> Marketing and Advertising automation solution. Customize according to your need . 
         </p>
         <form className="space-x-3">
-        <input type="text" placeholder="Enter you email......." className="bg-white rounded border border-gray-300 p-3" />
+        <input type="text" placeholder="Enter you email......." className="bg-white rounded border border-gray-300 p-3 focus:border focus:border-blue-600" />
         <button type="submit" className="bg-blue-600 text-white p-3 rounded mx-3 font-bold text-xl">Contact me back</button>
         </form>
         </div>
       </div>
+    </div>
+
+    <div className="container mx-auto max-w-8xl mt-48">
+      <div className="text-center">
+        <h1 className="text-7xl leading tight mx-auto">
+          What do we offer <span className="text-blue-600">?</span>
+        </h1>
+
+        <div className="text-center md:flex mt-24">
+
+        <OfferCard image="/media/create_content.png" header = "Advertisement Creation" text="Animation,Image & Video ad creation ."/>
+        <OfferCard image="/media/upload.png" header="Multi-Platform Upload" text="Uploading ads to multiple advertisement platforms ."/>
+        <OfferCard image="/media/processing.png" header="Advertisement Analytics" text="Marketing & Advertisement Analysis ."/>
+        <OfferCard image="/media/emailing.png" header="Email and Text Promotions" text="Leave us to send promotional mails & messages for you ."/>
+        <OfferCard image="/media/advertisement.png" header="Online Presence & Consultation" text="Your online presence is important ,we grow with you ."/>
+
+        </div>
+      </div>
+    
+    </div>
+
+    <div className="container mx-auto max-w-8xl mt-48">
+      <div className="text-center">
+        <h1 className="text-7xl leading tight mx-auto">
+          What do we offer <span className="text-blue-600">?</span>
+        </h1>
+
+        <div className="text-center md:flex mt-24">
+
+        <OfferCard image="/media/create_content.png" header = "Advertisement Creation" text="Animation,Image & Video ad creation ."/>
+        <OfferCard image="/media/upload.png" header="Multi-Platform Upload" text="Uploading ads to multiple advertisement platforms ."/>
+        <OfferCard image="/media/processing.png" header="Advertisement Analytics" text="Marketing & Advertisement Analysis ."/>
+        <OfferCard image="/media/emailing.png" header="Email and Text Promotions" text="Leave us to send promotional mails & messages for you ."/>
+        <OfferCard image="/media/advertisement.png" header="Online Presence & Consultation" text="Your online presence is important ,we grow with you ."/>
+
+        </div>
+      </div>
+    
     </div>
     </div>
     )
